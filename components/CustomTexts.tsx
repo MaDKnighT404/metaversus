@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { textContainer, textVariant2 } from '@/utils/motion';
 import { ReactNode } from 'react';
 
-export const TypingText = ({ title, textStyles }: { title: string; textStyles: string }) => (
+export const TypingText = ({ title, textStyles }: { title: string; textStyles?: string }) => (
   <motion.p
     variants={textContainer}
     className={`font-normal text-[14px] text-secondary-white ${textStyles}`}
@@ -21,7 +21,7 @@ export const TitleText = ({
   textStyles,
 }: {
   title: ReactNode | string;
-  textStyles: string;
+  textStyles?: string;
 }) => (
   <motion.h3
     variants={textVariant2}
