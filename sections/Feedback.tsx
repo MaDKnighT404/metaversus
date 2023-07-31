@@ -1,13 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { fadeIn, staggerContainer, zoomIn } from '@/utils/motion';
+import { fadeIn, zoomIn } from '@/utils/motion';
 import styles from '../styles';
 
 const Feedback = () => (
   <section className={`${styles.paddings}`}>
     <motion.div
-      // variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}

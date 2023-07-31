@@ -3,13 +3,12 @@
 import { motion } from 'framer-motion';
 import { NewFeatures, TitleText, TypingText } from '@/components';
 import { newFeatures } from '@/constants';
-import { staggerContainer, fadeIn, planetVariants } from '@/utils/motion';
+import { fadeIn, planetVariants } from '@/utils/motion';
 import styles from '../styles';
 
 const WhatsNew = () => (
   <section className={`${styles.paddings} relative z-10`}>
     <motion.div
-      // variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
@@ -23,7 +22,7 @@ const WhatsNew = () => (
         <TitleText title={<>What's new about Metaversus?</>} />
         <div className="mt-[48px] flex flex-wrap justify-between gap-[24px]">
           {newFeatures.map((feature) => (
-            <NewFeatures key={feature.title} {...feature}/>
+            <NewFeatures key={feature.title} {...feature} />
           ))}
         </div>
       </motion.div>
